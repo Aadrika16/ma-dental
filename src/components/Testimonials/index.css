@@ -1,0 +1,148 @@
+.testimonials-section {
+	background: #fff;
+	border-bottom: 1px solid #f5dede;
+	padding: 74px clamp(18px, 7vw, 100px) 84px;
+}
+
+.testimonials-heading { margin: 0 auto 43px; text-align: center; }
+.testimonials-eyebrow { color: #087a72; display: block; font-size: 9px; font-weight: 700; letter-spacing: .9px; margin-bottom: 9px; }
+.testimonials-heading h2 { color: #111b31; font-size: clamp(31px, 3.2vw, 42px); letter-spacing: -1.5px; line-height: 1; margin: 0 0 11px; }
+.overall-rating { align-items: center; display: flex; gap: 10px; justify-content: center; }
+.overall-rating strong, .review-stars { color: #f7ad1c; letter-spacing: 2px; }
+.overall-rating strong { font-size: 14px; }
+.overall-rating b { color: #334158; font-size: 10px; }
+
+.testimonials-grid { display: grid; gap: 24px; grid-template-columns: repeat(3, minmax(0, 1fr)); }
+.testimonial-card { background: #f8fafc; border: 1px solid #e4ebf0; border-radius: 12px; min-height: 184px; padding: 19px 20px 17px; }
+.review-stars { font-size: 11px; line-height: 1; }
+.testimonial-card > p { color: #53627b; font-size: 13px; font-style: italic; line-height: 1.6; margin: 14px 0 18px; min-height: 83px; }
+.reviewer { align-items: center; border-top: 1px solid #e6edf1; display: flex; gap: 10px; padding-top: 11px; }
+.reviewer img { border-radius: 50%; height: 29px; object-fit: cover; width: 29px; }
+.reviewer div { display: grid; gap: 3px; }
+.reviewer strong { color: #1b273d; font-size: 11px; }.reviewer small { color: #93a1b2; font-size: 10px; }
+
+.doctor-spotlight {
+	background: #062d2f;
+	border-radius: 22px;
+	color: #fff;
+	display: grid;
+	gap: 28px;
+	grid-template-columns: 200px 1fr;
+	margin: 64px auto 0;
+	max-width: 1180px;
+	padding: 26px 28px;
+}
+
+.doctor-spotlight__photo { align-items: center; display: flex; justify-content: center; }
+.doctor-spotlight__photo img {
+	border: 4px solid rgba(255,255,255,.2);
+	border-radius: 50%;
+	display: block;
+	height: 160px;
+	object-fit: cover;
+	width: 160px;
+}
+
+.doctor-spotlight__content { padding: 8px 0; position: relative; }
+.quote-mark {
+	color: rgba(255,255,255,.38);
+	font-size: 70px;
+	font-weight: 700;
+	line-height: 1;
+	position: absolute;
+	left: 0;
+	top: -8px;
+}
+
+.doctor-spotlight__content p {
+	color: rgba(255,255,255,.9);
+	font-size: clamp(17px, 1.8vw, 24px);
+	line-height: 1.45;
+	margin: 0 0 18px 36px;
+	max-width: 760px;
+}
+
+.doctor-signature {
+	align-items: flex-start;
+	display: flex;
+	flex-direction: column;
+	gap: 5px;
+	margin-left: 36px;
+}
+
+.doctor-signature strong { font-size: 15px; font-weight: 700; }
+.doctor-signature span {
+	color: rgba(190,234,230,.8);
+	font-size: 11px;
+	letter-spacing: .3px;
+	text-transform: uppercase;
+}
+
+.cta-band {
+	align-items: center;
+	background: #f8faf7;
+	border: 1px solid #e1eae8;
+	border-radius: 20px;
+	display: flex;
+	justify-content: space-between;
+	margin-top: 56px;
+	padding: 26px 28px;
+	width: 100%;
+}
+
+.cta-band__copy span {
+	color: #0d7d71;
+	display: block;
+	font-size: 10px;
+	font-weight: 700;
+	letter-spacing: 1px;
+	margin-bottom: 8px;
+	text-transform: uppercase;
+}
+
+.cta-band__copy h3 {
+	color: #111b31;
+	font-size: clamp(28px, 3vw, 42px);
+	letter-spacing: -1.3px;
+	line-height: 1;
+	margin: 0;
+}
+
+.cta-band__actions { display: flex; flex-wrap: wrap; gap: 12px; justify-content: flex-end; }
+.primary-cta, .secondary-cta {
+	border-radius: 999px;
+	font-size: 12px;
+	font-weight: 700;
+	padding: 14px 22px;
+	text-decoration: none;
+	transition: .2s ease;
+}
+.primary-cta { background: #0a4d4c; color: #fff; }
+.secondary-cta {
+	background: #fff;
+	border: 1px solid #d8e2ea;
+	color: #0d1c2d;
+}
+
+@media (max-width: 760px) {
+	.testimonials-grid { grid-template-columns: 1fr; }
+	.testimonial-card { min-height: auto; }
+	.testimonial-card > p { min-height: auto; }
+	.doctor-spotlight { grid-template-columns: 1fr; padding: 24px 20px; }
+	.doctor-spotlight__photo { justify-content: flex-start; }
+	.cta-band { align-items: flex-start; flex-direction: column; gap: 20px; }
+	.cta-band__actions { justify-content: flex-start; }
+}
+
+@media (max-width: 480px) {
+	.testimonials-section { padding-bottom: 60px; padding-top: 58px; }
+	.testimonials-heading { margin-bottom: 30px; }
+	.overall-rating b { font-size: 9px; }
+	.doctor-spotlight { margin-top: 46px; }
+	.doctor-spotlight__photo img { height: 120px; width: 120px; }
+	.doctor-spotlight__content p, .doctor-signature { margin-left: 28px; }
+	.quote-mark { font-size: 56px; }
+	.cta-band { margin-top: 42px; padding: 22px 18px; }
+	.cta-band__copy h3 { font-size: 24px; }
+	.primary-cta, .secondary-cta { width: 100%; text-align: center; }
+}
