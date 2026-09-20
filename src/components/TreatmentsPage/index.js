@@ -1,4 +1,5 @@
 import './index.css';
+import { Link } from 'react-router-dom';
 
 const treatmentCards = [
   {
@@ -185,7 +186,7 @@ function TreatmentsPage() {
                     <small>{card.price}</small>
                     <strong>{card.amount}</strong>
                   </div>
-                  <button type="button" className="book-btn">{card.cta}</button>
+                  <Link to="/book-appointment" className="book-btn">{card.cta}</Link>
                 </div>
               </div>
             </article>
@@ -224,7 +225,7 @@ function TreatmentsPage() {
           </div>
 
           <div className="consult-actions">
-            <button type="button" className="reserve-btn">Reserve Initial Consultation</button>
+            <Link to="/book-appointment" className="reserve-btn">Reserve Initial Consultation</Link>
             <button type="button" className="call-btn">Speak to Doctor: +1 (800) 555-MAAR</button>
           </div>
         </section>

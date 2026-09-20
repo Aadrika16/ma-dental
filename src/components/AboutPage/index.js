@@ -1,4 +1,5 @@
 import './index.css';
+import { Link } from 'react-router-dom';
 
 const distinctionCards = [
   {
@@ -142,7 +143,7 @@ function AboutPage() {
             <h2>Experience the New Standard of Dental Care</h2>
           </div>
           <div className="about-cta__actions">
-            <a href="#contact" className="primary-button">Book Your Consultation</a>
+            <Link to="/book-appointment" className="primary-button">Book Your Consultation</Link>
             <a href="#treatments" className="secondary-button">Explore Our Specialties</a>
           </div>
         </section>

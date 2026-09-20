@@ -1,4 +1,5 @@
 import './index.css';
+import { Link } from 'react-router-dom';
 
 const specialists = [
 	{
@@ -57,7 +58,7 @@ function Specialists() {
 							<p>{specialist.description}</p>
 							<div className="specialist-footer">
 								<span>{specialist.category}</span>
-								<a href="#contact">Book Consult <span aria-hidden="true">&rarr;</span></a>
+								<Link to="/book-appointment">Book Consult <span aria-hidden="true">&rarr;</span></Link>
 							</div>
 						</div>
 					</article>

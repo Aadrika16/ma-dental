@@ -1,5 +1,6 @@
 import './index.css';
 import { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 
 const WHATSAPP_NUMBER = '917799234108';
 
@@ -16,6 +17,7 @@ function DentalChatbot() {
     { sender: 'bot', text: 'Hi, I am the Ma Dental concierge. How can I help today?' }
   ]);
   const [input, setInput] = useState('');
+  const navigate = useNavigate();
 
   const openWhatsApp = (message) => {
     const url = `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(message)}`;
@@ -23,6 +25,12 @@ function DentalChatbot() {
   };
 
   const chooseReply = (option) => {
+    if (option.label === 'Book an appointment') {
+      setIsOpen(false);
+      navigate('/book-appointment');
+      return;
+    }
+
     setMessages((current) => [
       ...current,
       { sender: 'user', text: option.label },

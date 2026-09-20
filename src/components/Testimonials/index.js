@@ -1,4 +1,5 @@
 import './index.css';
+import { Link } from 'react-router-dom';
 
 const testimonials = [
 	{
@@ -52,7 +53,7 @@ function Testimonials() {
 					<h3>Experience the New Standard of Dental Care</h3>
 				</div>
 				<div className="cta-band__actions">
-					<a className="primary-cta" href="#contact">Book Your Consultation</a>
+					<Link className="primary-cta" to="/book-appointment">Book Your Consultation</Link>
 					<a className="secondary-cta" href="#treatments">Explore Our Specialties</a>
 				</div>
 			</div>

@@ -1,5 +1,6 @@
 import './index.css';
 import { useMemo, useState } from 'react';
+import { Link } from 'react-router-dom';
 
 const categories = [
   'All Specialists',
@@ -215,9 +216,9 @@ function DoctorsPage() {
                   <span>📍 {doctor.location}</span>
                 </div>
 
-                <button type="button" className="book-btn">
+                <Link to="/book-appointment" className="book-btn">
                   Book Consultation <span aria-hidden="true">→</span>
-                </button>
+                </Link>
               </div>
             </article>
           ))}
@@ -270,7 +271,7 @@ function DoctorsPage() {
           </div>
 
           <div className="cta-actions">
-            <button type="button" className="primary-cta">Book Consultation</button>
+            <Link to="/book-appointment" className="primary-cta">Book Consultation</Link>
             <button type="button" className="secondary-cta">Ask Concierge</button>
           </div>
         </section>

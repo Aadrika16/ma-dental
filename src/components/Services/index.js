@@ -1,4 +1,5 @@
 import './index.css';
+import { Link } from 'react-router-dom';
 
 const services = [
 	{
@@ -61,7 +62,7 @@ function Services() {
 							{service.points.length > 0 && <ul>
 								{service.points.map((point) => <li key={point}>{point}</li>)}
 							</ul>}
-							<a href="#contact">{service.link} <span aria-hidden="true">&rarr;</span></a>
+							<Link to="/book-appointment">{service.link} <span aria-hidden="true">&rarr;</span></Link>
 						</div>
 					</article>
 				))}

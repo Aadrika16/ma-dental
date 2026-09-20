@@ -1,4 +1,5 @@
 import './index.css';
+import { Link } from 'react-router-dom';
 
 function Hero() {
 	return (
@@ -9,8 +10,8 @@ function Hero() {
 					<h1>Your Smile<br />Deserves<br /><em>Expert Care.</em></h1>
 					<p>Advanced dental treatments, experienced specialists, and compassionate care &mdash; all under one roof at Ma Dental. We prioritize your comfort and health with state-of-the-art precision.</p>
 					<div className="hero-actions">
-						<a className="primary-button" href="/book-appointment">Book an Appointment <span aria-hidden="true">&rarr;</span></a>
-						<a className="secondary-button" href="#contact"><span aria-hidden="true">&#9675;</span> Chat on WhatsApp</a>
+						<Link className="primary-button" to="/book-appointment">Book an Appointment <span aria-hidden="true">&rarr;</span></Link>
+						<a className="secondary-button" href="https://wa.me/917799234108?text=Hello%20Ma%20Dental%2C%20I%20would%20like%20to%20connect%20with%20your%20team." target="_blank" rel="noreferrer"><span aria-hidden="true">&#9675;</span> Chat on WhatsApp</a>
 					</div>
 					<div className="trust-row">
 						<div className="patient-avatars" aria-hidden="true"><span>R</span><span>A</span><span>M</span><span>S</span></div>

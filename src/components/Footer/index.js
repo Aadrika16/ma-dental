@@ -1,4 +1,5 @@
 import './index.css';
+import { Link } from 'react-router-dom';
 
 function Footer() {
 	return (
@@ -11,7 +12,7 @@ function Footer() {
 					<div className="social-links" aria-label="Social media links">
 						<a href="#instagram" aria-label="Instagram">IG</a>
 						<a href="#facebook" aria-label="Facebook">f</a>
-						<a href="#whatsapp" aria-label="WhatsApp">WA</a>
+						<a href="https://wa.me/917799234108" target="_blank" rel="noreferrer" aria-label="WhatsApp">WA</a>
 					</div>
 					<form className="newsletter-form">
 						<input type="email" placeholder="Enter your correspondence email" aria-label="Email address" />
@@ -24,7 +25,7 @@ function Footer() {
 					<a href="#about">About Us</a>
 					<a href="#treatments">Treatments</a>
 					<a href="#doctors">Our Doctors</a>
-					<a href="/book-appointment">Book Appointment</a>
+					<Link to="/book-appointment">Book Appointment</Link>
 				</div>
 
 				<div className="footer-column hours-column">
@@ -46,7 +47,7 @@ function Footer() {
 					<div className="social-links footer-social">
 						<a href="#instagram" aria-label="Instagram">IG</a>
 						<a href="#facebook" aria-label="Facebook">f</a>
-						<a href="#whatsapp" aria-label="WhatsApp">WA</a>
+						<a href="https://wa.me/917799234108" target="_blank" rel="noreferrer" aria-label="WhatsApp">WA</a>
 					</div>
 				</div>
 			</div>
